@@ -1,0 +1,54 @@
+{
+  "env": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu128",
+    "gpu": "Tesla T4",
+    "cpu": "x86_64",
+    "ultralytics": "8.4.177"
+  },
+  "train": {
+    "imgsz": 640,
+    "epochs": 100,
+    "batch": 16,
+    "optimizer": "SGD",
+    "lr0": 0.01,
+    "lrf": 0.01,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3,
+    "cos_lr": false,
+    "patience": 100,
+    "close_mosaic": 10,
+    "workers": 4,
+    "amp": true,
+    "deterministic": true,
+    "cache": false,
+    "pretrained": true,
+    "mosaic": 1.0,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "fliplr": 0.5,
+    "flipud": 0.0,
+    "scale": 0.5,
+    "translate": 0.1
+  },
+  "eval": {
+    "imgsz": 640,
+    "batch": 16,
+    "conf": 0.001,
+    "iou": 0.6
+  },
+  "models": {
+    "YOLOv5n": "yolov5nu.pt",
+    "YOLOv8n": "yolov8n.pt",
+    "YOLOv9t": "yolov9t.pt",
+    "YOLOv10n": "yolov10n.pt",
+    "YOLO11n": "yolo11n.pt",
+    "YOLO12n": "yolo12n.pt",
+    "YOLO26n": "yolo26n.pt"
+  },
+  "seeds": [
+    0
+  ]
+}
